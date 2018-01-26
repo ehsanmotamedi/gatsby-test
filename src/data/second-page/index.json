@@ -1,0 +1,9 @@
+[
+	{
+		"frontmatter": {
+			"path": "/json-second-page",
+			"title": "Hello world again! (second page)"
+		},
+		"html": "Here is some more body text for our second page."
+	}
+]

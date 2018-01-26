@@ -1,0 +1,31 @@
+# gatsby-transformer-remark:
+{
+  allMarkdownRemark {
+    edges {
+      node {
+        html
+        id
+        frontmatter {
+          title
+          path
+        }
+      }
+    }
+  }
+}
+
+# gatsby-transformer-json:
+{
+  allIndexJson {
+    edges {
+      node {
+        html
+        id
+        frontmatter{
+          path
+          title
+        }
+      }
+    }
+  }
+}
