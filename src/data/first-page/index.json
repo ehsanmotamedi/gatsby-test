@@ -1,0 +1,10 @@
+// This file is currently not being used.
+// The hope is to get it working with the gatsby-transformer-json plugin
+[
+	{ "page" : {
+		"path": "/first-page",
+		"title": "Hello world!",
+		"content": "Here is some body text for our first page."
+	}
+}
+];

@@ -5,3 +5,40 @@
  */
 
  // You can delete this file if you're not using it
+
+ const path = require('path');
+
+ exports.createPages = ({boundActionCreators, graphql}) => {
+
+ 	const {createPage} = boundActionCreators;
+
+ 	const postTempalte = path.resolve('src/templates/default.js');
+
+ 	return graphql(`{
+ 		allMarkdownRemark {
+ 			edges {
+ 				node {
+ 					html
+ 					id
+ 					frontmatter {
+ 						path
+ 						title
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}`)
+ 	.then(res => {
+ 		if (res.errors) {
+ 			console.log("test ehsan");
+ 			return Promise.reject(res.errors);
+ 		}
+
+ 		res.data.allMarkdownRemark.edges.forEach( ({node}) => {
+ 			createPage({
+ 				path: node.frontmatter.path,
+ 				component: postTempalte
+ 			})
+ 		})
+ 	})
+ }

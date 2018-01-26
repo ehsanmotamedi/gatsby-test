@@ -3,7 +3,7 @@ For an overview of the project structure please refer to the [Gatsby documentati
 
 Try editing the javascript pages in src/pages. Saved changes will live reload in the browser.
 
-## Start Development Server
+## Start the Development Server
 ```
 gatsby develop
 ```
